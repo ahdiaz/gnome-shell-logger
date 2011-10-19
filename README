@@ -1,0 +1,29 @@
+Abstract
+--------
+
+This program adds the ability of logging to a file the debug and error messages produced by GnomeShell and its extensions.
+The log file is written in /tmp/gshell.log by default, but you can change various options editing the file extension.js
+
+Credits
+-------
+
+- The log4javascript library was written by Tim Down and is licensed under the terms of the Apache License, Version 2.0.
+
+- The files log4javascript_file_appender.js and log4javascript_gjs_appender.js was written by Tim Cuthbertson
+and are licensed under the terms of the GNU General Public License version 3 or later.
+
+- The file extension.js was written by Antonio Hernández and is licensed under the terms of the GNU General Public License
+version 2 or later.
+
+Installation
+------------
+
+ * Copy the extension directory under ~/.local/share/gnome-shell/extensions/
+ * Restart the shell: ALT + F2, type "r" and press ENTER.
+ * You are ready to go.
+
+License
+-------
+
+This project is licensed under the terms of the GPL v2.0,
+see http://www.gnu.org/licenses/gpl-2.0.html
