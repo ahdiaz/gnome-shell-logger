@@ -1,7 +1,0 @@
-{
-  "shell-version": ["3.2.0"],
-  "uuid": "gnome-shell-logger@emergya.com",
-  "name": "gnome-shell-logger",
-  "description": "A file logger for Gnome Shell",
-  "url" : "http://www.emergya.com"
-}
