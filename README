@@ -2,7 +2,8 @@ Abstract
 --------
 
 This program adds the ability of logging to a file the debug and error messages produced by GnomeShell and its extensions.
-The log file is written in /tmp/gshell.log by default, but you can change various options editing the file extension.js
+The log file is written in /tmp/gshell.log by default, but you can change this and other options editing the file logger.js
+
 
 Credits
 -------
@@ -12,15 +13,34 @@ Credits
 - The files log4javascript_file_appender.js and log4javascript_gjs_appender.js was written by Tim Cuthbertson
 and are licensed under the terms of the GNU General Public License version 3 or later.
 
-- The file extension.js was written by Antonio Hernández and is licensed under the terms of the GNU General Public License
+- The file logger.js was written by Antonio Hernández and is licensed under the terms of the GNU General Public License
 version 2 or later.
 
-Installation
-------------
 
- * Copy the extension directory under ~/.local/share/gnome-shell/extensions/
- * Restart the shell: ALT + F2, type "r" and press ENTER.
- * You are ready to go.
+Installation and usage
+----------------------
+
+The program is intended to be used as a GnomeShell module, so you must copy the logger directory under
+/usr/share/gnome-shell/js/ and include the module in main.js with this line:
+
+    const Logger = imports.logger.logger;
+
+All the messages sent to the default Gnome Shell logger, that is, calling global.log(), will also be send to
+log4javascript.
+
+You can also use the logger directly by calling the following methods:
+
+global.logger.debug()
+global.logger.info()
+global.logger.warn()
+global.logger.error()
+global.logger.fatal()
+
+
+Tip: If you want to see the messages produced by Gjs in gshell.log you can start GnomeShell this way from a tty:
+
+    DISPLAY=:0 gnome-shell --replace 2&>>/tmp/gshell.log
+
 
 License
 -------

@@ -62,7 +62,7 @@ function init() {
 
 		init_logging();
 
-		// Every message sended to global.log() will be sended also
+		// Every message sent to global.log() will also be send
 		// to log4javascript.
 		Main._log = function(category, msg) {
 
@@ -91,7 +91,7 @@ function init() {
 			Main._errorLogStack.push(logItem);
 		};
 
-	} catch (e) {
+	} catch(e) {
 		global.log(e);
 		print("ERROR in log initialization: " + e);
 	}
